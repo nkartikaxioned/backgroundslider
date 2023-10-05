@@ -130,11 +130,13 @@ li {
   width: 100%; 
   height: 100%; 
   display: none;
+  transition: 1s;
 }
 
 .backgroundSlider_image {
   height: 100%;
   width: 100%;
+  transition: 1s;
 }
 
 .backgroundSlider_imageList .activeBackground { display: block; }
@@ -154,12 +156,14 @@ li {
   width: 100%;
   height: 100%;
   display: none; 
+  transition: 1s;
 }
 
 .mainSlider_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: 1s;
 }
 
 .mainSlider_list .active { display: block; }
