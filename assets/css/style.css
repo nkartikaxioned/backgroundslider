@@ -79,7 +79,7 @@ sub { bottom: -.25em; }
 }
 
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+/* .cf { *zoom: 1; } */
 
 /*for all*/
 body {
@@ -103,47 +103,38 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
 
 /*=================================
   main styling starts here
 =================================*/
 
+.slider {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
 
+.backgroundSlider_imageList {
+ height: 100%;
+ width: 100%;
+ display: flex;
+ overflow: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
 
+.backgroundSlider_image {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
 
-
-
-
-
+.activeBackground { display: block; }
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
