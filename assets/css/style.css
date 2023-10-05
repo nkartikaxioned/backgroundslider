@@ -112,7 +112,7 @@ li {
   height: 100vh;
   width: 100%;
   position: relative;
-  z-index: -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5));
 }
 
 .backgroundSlider_imageList {
@@ -129,15 +129,99 @@ li {
 .backgroundSlider_imageList li { 
   width: 100%; 
   height: 100%; 
+  display: none;
 }
 
 .backgroundSlider_image {
   height: 100%;
   width: 100%;
-  display: none;
 }
 
-.activeBackground { display: block; }
+.backgroundSlider_imageList .activeBackground { display: block; }
+
+.mainSlider_list {
+  width: 65%;
+  height: 70%;
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  top: 15%;
+  left: 17.5%;
+  transform: translate(0,0);
+}
+
+.mainSlider_list li { 
+  width: 100%;
+  height: 100%;
+  display: none; 
+}
+
+.mainSlider_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mainSlider_list .active { display: block; }
+
+
+.rightbutton ,.leftbutton { 
+  padding: 15%;
+  text-indent: -9999px;
+  float: left;
+  transition: 0.2s;
+  font-size: 45px;
+  color: #fff;
+ }
+
+.leftbutton::before {
+  font-family: "fontAwesome";
+  content: "\f060";
+  text-indent: 0;
+  float: left;
+}
+
+.rightbutton::before {
+  font-family: "fontAwesome";
+  content: "\f061";
+  text-indent: 0;
+  float: left;
+}
+
+.rightbutton {
+  border-top: 2px solid #F8A500;
+  border-bottom: 2px solid #F8A500;
+  border-right: 2px solid #F8A500;
+}
+
+.buttoncontainerl { 
+  width: 9%; 
+  height: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  top:42%;
+  left: 8.6%;
+}
+
+.buttoncontainerr {
+  width: 9%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: absolute;
+  top:42%;
+  right: 8.6%;
+}
+
+.leftbutton {
+  border-top: 2px solid #F8A500;
+  border-bottom: 2px solid #F8A500;
+  border-left: 2px solid #F8A500;
+}
+
 /*=================================
   main styling ends here
 =================================*/
