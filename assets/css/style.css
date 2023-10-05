@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html { overflow-y: scroll;   }
 
 /* Align radios and text inputs with their label */
 
@@ -85,6 +85,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   font-family: sans-serif;
+  transition: .4s;
 }
 
 a { 
@@ -124,19 +125,21 @@ li {
  top: 0;
  left: 0;
  z-index: -1;
+ /* transition: 1s ease; */
+ 
 }
 
 .backgroundSlider_imageList li { 
   width: 100%; 
   height: 100%; 
   display: none;
-  transition: 1s;
+  /* transition: 1s ease; */
+ 
 }
 
 .backgroundSlider_image {
   height: 100%;
   width: 100%;
-  transition: 1s;
 }
 
 .backgroundSlider_imageList .activeBackground { display: block; }
@@ -150,13 +153,14 @@ li {
   top: 15%;
   left: 17.5%;
   transform: translate(0,0);
-}
+  /* transition: 1s ease;*/
+} 
 
 .mainSlider_list li { 
   width: 100%;
   height: 100%;
   display: none; 
-  transition: 1s;
+  /* transition: 1s; */
 }
 
 .mainSlider_image {
@@ -226,10 +230,27 @@ li {
   border-left: 2px solid #F8A500;
 }
 
+.animation1 {
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.animation2 {
+  animation-name: examplee;
+  animation-duration: 1s;
+}
 /*=================================
   main styling ends here
 =================================*/
+@keyframes example {
+  from {transform: scaleY(1);}
+  to {transform: scaleY(1.1);}
+}
 
+@keyframes examplee {
+  from {transform: scaleY(1.1);}
+  to {transform: scaleY(1);}
+}
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (max-width: 995px) {
